@@ -39,8 +39,8 @@ def invoke_lambda_function(hashtags):
         # Create a Lambda client
         lambda_client = boto3.client('lambda', 
                                      region_name='ca-central-1',
-                                     aws_access_key_id='AKIAZI2LHWVWYITQLQJE',
-                                     aws_secret_access_key='plGGDaTAp8FpvYwhL7sDcow5nfPAOC0ERzH1q+mR'
+                                     aws_access_key_id='YOUR_ACCESS_KEY_ID',
+                                     aws_secret_access_key='YOUR_SECRET_ACCESS_KEY')
                                     )
 
         # Invoke the Lambda function
@@ -66,8 +66,8 @@ def store_hashtags_in_dynamodb(hashtags):
         # Create a DynamoDB client
         dynamodb = boto3.resource('dynamodb',
                                   region_name='ca-central-1',
-                                  aws_access_key_id='AKIAZI2LHWVWYITQLQJE',
-                                  aws_secret_access_key='plGGDaTAp8FpvYwhL7sDcow5nfPAOC0ERzH1q+mR'
+                                  aws_access_key_id='YOUR_ACCESS_KEY_ID',
+                                  aws_secret_access_key='YOUR_SECRET_ACCESS_KEY')
                                   )
         table = dynamodb.Table('tag_table')
 
@@ -101,8 +101,8 @@ if st.button("Click here to analyze", key="my-btn", use_container_width=True):
                 try:
                     dynamodb = boto3.resource('dynamodb',
                                   region_name='ca-central-1',
-                                  aws_access_key_id='AKIAZI2LHWVWYITQLQJE',
-                                  aws_secret_access_key='plGGDaTAp8FpvYwhL7sDcow5nfPAOC0ERzH1q+mR'
+                                  aws_access_key_id='YOUR_ACCESS_KEY_ID',
+                                  aws_secret_access_key='YOUR_SECRET_ACCESS_KEY')
                                   )
 
                     table = dynamodb.Table('tag_table')
